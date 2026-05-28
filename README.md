@@ -24,7 +24,10 @@ python -m src.amqp.topology python -m src.amqp.producer python -m src.amqp.consu
 
 5. Run all tests 
 pytest tests/ -v --tb=short
+```
 
+
+---
 
 ## Repository Structure
 
@@ -65,7 +68,6 @@ module1-assignment/
 ├── pytest.ini
 └── setup.sh                  ← Run this first
 ```
-
 
 ---
 
