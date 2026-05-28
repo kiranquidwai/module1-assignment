@@ -1,6 +1,7 @@
 # Module 1 Assignment — SmartFactory IoT Protocol Integration
 
 **Real-Time Data Analytics for IoT** · Graduate Course · Module 1
+---
 Student name: Kiran Ahmed Quidwai          
 ID: 100999782
 
@@ -9,15 +10,19 @@ ID: 100999782
 ## Quick Start
 
 ```bash
-# 1. Install dependencies and start Docker services
+1. Install dependencies and start Docker services
 bash setup.sh
-# 2. Run MQTT components 
+
+2. Run MQTT components 
 python -m src.mqtt.publisher python -m src.mqtt.subscriber 
-# 3. Run CoAP components 
+
+3. Run CoAP components 
 python -m src.coap.server python -m src.coap.observer 
-# 4. Run AMQP components 
+
+4. Run AMQP components 
 python -m src.amqp.topology python -m src.amqp.producer python -m src.amqp.consumer 
-# 5. Run all tests 
+
+5. Run all tests 
 pytest tests/ -v --tb=short
 
 
@@ -66,20 +71,20 @@ module1-assignment/
 ## Running Individual Components
 
 ```bash
-# Task 1 — MQTT
+Task 1 — MQTT
 python -m src.mqtt.publisher       # Terminal 1
 python -m src.mqtt.subscriber      # Terminal 2
 
-# Task 2 — CoAP
+Task 2 — CoAP
 python -m src.coap.server          # Terminal 1
 python -m src.coap.observer        # Terminal 2
 
-# Task 3 — AMQP (run in order)
+Task 3 — AMQP (run in order)
 python -m src.amqp.topology        # Once — sets up RabbitMQ topology
 python -m src.amqp.producer        # Terminal 1
 python -m src.amqp.consumer        # Terminal 2
 
-# Task 4 — Packet capture (with publisher/server running)
+Task 4 — Packet capture (with publisher/server running)
 bash scripts/capture.sh
 ```
 
@@ -88,15 +93,15 @@ bash scripts/capture.sh
 ## Running Tests
 
 ```bash
-# All tests
+All tests
 pytest tests/ -v
 
-# Individual task tests
+Individual task tests
 pytest tests/mqtt/ -v
 pytest tests/coap/ -v
 pytest tests/amqp/ -v
 
-# QoS experiment with output table (Task 1.3)
+QoS experiment with output table (Task 1.3)
 pytest tests/mqtt/test_qos_loss.py -v -s
 ```
 
@@ -113,13 +118,13 @@ pytest tests/mqtt/test_qos_loss.py -v -s
 | InfluxDB (optional) | 8086 | http://localhost:8086 |
 
 ```bash
-# Start all services
+## Start all services
 docker compose up -d
 
-# Stop all services
+## Stop all services
 docker compose down
 
-# View logs
+## View logs
 docker compose logs -f mosquitto
 docker compose logs -f rabbitmq
 ```
