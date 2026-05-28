@@ -32,39 +32,40 @@ pytest tests/ -v --tb=short
 module1-assignment/
 ├── src/
 │   ├── mqtt/
-│   │   ├── publisher.py     
-│   │   └── subscriber.py     
+│   │   ├── publisher.py      ← Task 1.1  Fill in all TODO sections
+│   │   └── subscriber.py     ← Task 1.2  Fill in all TODO sections
 │   ├── coap/
-│   │   ├── server.py        
-│   │   └── observer.py     
+│   │   ├── server.py         ← Task 2.1  Fill in all TODO sections
+│   │   └── observer.py       ← Task 2.2  Fill in all TODO sections
 │   └── amqp/
-│       ├── topology.py       
-│       ├── producer.py       
-│       └── consumer.py       
+│       ├── topology.py       ← Task 3.1  Fill in all TODO sections
+│       ├── producer.py       ← Task 3.2  Fill in all TODO sections
+│       └── consumer.py       ← Task 3.3  Fill in all TODO sections
 │
 ├── tests/
 │   ├── mqtt/
+│   │   ├── test_publisher.py   ← Do not modify
+│   │   └── test_qos_loss.py    ← Do not modify (run with -s for output table)
 │   ├── coap/
+│   │   └── test_server.py      ← Do not modify
 │   └── amqp/
+│       └── test_topology.py    ← Do not modify
 │
 ├── report/
-│   ├── packet_analysis.md    
-│   └── comparison_report.md  
+│   ├── packet_analysis.md    ← Task 4  Fill in the annotation tables
+│   └── comparison_report.md  ← Task 5  Write your analysis here
 │
-├── captures/                 
-│   ├── mqtt.pcap 
-│   ├── coap.pcap 
-│   └── amqp.pcap
-│ 
+├── captures/                 ← Task 4  pcap files go here (git-ignored)
 ├── scripts/
-│   └── capture.sh          
+│   └── capture.sh            ← Task 4  Run to capture traffic
 ├── config/
-│   └── mosquitto.conf       
-├── docker-compose.yml      
+│   └── mosquitto.conf        ← Mosquitto broker configuration
+├── docker-compose.yml        ← Infrastructure: Mosquitto + RabbitMQ + InfluxDB
 ├── requirements.txt
 ├── pytest.ini
-└── README.md
+└── setup.sh                  ← Run this first
 ```
+
 
 ---
 
