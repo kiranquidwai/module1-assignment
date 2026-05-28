@@ -3,8 +3,3 @@ __pycache__/
 .pytest_cache/
 *.pyc
 captures/
-x
-X
-^X
-^x
-
